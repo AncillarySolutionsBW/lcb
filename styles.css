@@ -126,7 +126,7 @@
 
     .hero {
       position: relative;
-      min-height: calc(100vh - 66px);
+      min-height: auto;
       display: grid;
       align-items: stretch;
       overflow: hidden;
@@ -150,8 +150,8 @@
       grid-template-columns: 1fr;
       gap: 24px;
       align-items: center;
-      min-height: calc(100vh - 66px);
-      padding: 44px 0 30px;
+      min-height: auto;
+      padding: 50px 0 42px;
     }
 
     .kicker {
@@ -177,8 +177,8 @@
       max-width: 840px;
       margin: 18px 0 22px;
       color: var(--night);
-      font-size: clamp(2.85rem, 15vw, 3.85rem);
-      line-height: 0.9;
+      font-size: clamp(2.55rem, 12vw, 3.45rem);
+      line-height: 0.94;
       letter-spacing: 0;
     }
 
@@ -826,12 +826,12 @@
 
       .hero-grid {
         min-height: auto;
-        padding: 54px 0 44px;
+        padding: 62px 0 54px;
       }
 
       h1 {
-        font-size: clamp(3.4rem, 10vw, 6rem);
-        line-height: 0.88;
+        font-size: clamp(3.2rem, 8vw, 5.2rem);
+        line-height: 0.92;
       }
 
       h2 {
@@ -949,7 +949,7 @@
 
     @media (min-width: 981px) {
       .hero {
-        min-height: calc(100vh - 72px);
+        min-height: min(780px, calc(100vh - 72px));
       }
 
       .hero::before {
@@ -961,12 +961,13 @@
       .hero-grid {
         grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.52fr);
         gap: 44px;
-        min-height: calc(100vh - 72px);
+        min-height: min(780px, calc(100vh - 72px));
+        padding: 72px 0 64px;
       }
 
       h1 {
-        max-width: 680px;
-        font-size: clamp(3.1rem, 6.6vw, 6.4rem);
+        max-width: 660px;
+        font-size: clamp(3.35rem, 5.8vw, 5.8rem);
       }
 
       h2 {
