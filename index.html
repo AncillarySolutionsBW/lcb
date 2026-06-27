@@ -5,837 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ladies Circle Botswana 2025/2026</title>
   <meta name="description" content="Ladies Circle Botswana 2025/2026 portfolio: friendship, service, national projects, and community impact." />
-  <style>
-    :root {
-      --ink: #10131a;
-      --muted: #5f6875;
-      --line: #dce5ea;
-      --paper: #fffdfa;
-      --soft: #f4f8fa;
-      --night: #07053b;
-      --blue: #61b8e7;
-      --blue-dark: #1479b0;
-      --plum: #40294d;
-      --rose: #b94b5b;
-      --green: #206654;
-      --gold: #d99b2b;
-      --shadow: 0 24px 70px rgba(7, 5, 59, 0.13);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--paper);
-      line-height: 1.5;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .wrap {
-      width: min(1160px, calc(100% - 36px));
-      margin: 0 auto;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 253, 250, 0.92);
-      border-bottom: 1px solid rgba(16, 19, 26, 0.09);
-      backdrop-filter: blur(18px);
-    }
-
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .mark {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .mark img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      flex: 0 0 auto;
-    }
-
-    .mark strong {
-      display: block;
-      color: var(--night);
-      font-size: 0.95rem;
-      line-height: 1.1;
-    }
-
-    .mark span {
-      display: block;
-      color: var(--blue-dark);
-      font-size: 0.78rem;
-      font-weight: 750;
-      margin-top: 2px;
-    }
-
-    .navlinks {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.88rem;
-      font-weight: 750;
-      color: var(--night);
-    }
-
-    .navlinks a {
-      border-radius: 8px;
-      padding: 9px 12px;
-    }
-
-    .navlinks a:hover {
-      background: #e9f6fc;
-    }
-
-    .navlinks .solid {
-      background: var(--night);
-      color: white;
-      margin-left: 6px;
-    }
-
-    .hero {
-      position: relative;
-      min-height: calc(100vh - 72px);
-      display: grid;
-      align-items: stretch;
-      overflow: hidden;
-      background: var(--paper);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(90deg, rgba(255, 253, 250, 0.96) 0%, rgba(255, 253, 250, 0.91) 44%, rgba(255, 253, 250, 0.44) 100%),
-        url("images/hero-service.jpg") right center / min(56vw, 820px) auto no-repeat;
-      opacity: 0.95;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.52fr);
-      gap: 44px;
-      align-items: center;
-      min-height: calc(100vh - 72px);
-      padding: 54px 0 44px;
-    }
-
-    .kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--blue-dark);
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-    }
-
-    .kicker::before {
-      content: "";
-      width: 36px;
-      height: 3px;
-      background: var(--rose);
-      border-radius: 999px;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1 {
-      max-width: 840px;
-      margin-bottom: 22px;
-      margin-top: 18px;
-      color: var(--night);
-      font-size: clamp(3.1rem, 8vw, 7.8rem);
-      line-height: 0.88;
-      letter-spacing: 0;
-    }
-
-    .hero-lede {
-      max-width: 650px;
-      color: #333a45;
-      font-size: clamp(1.05rem, 2vw, 1.28rem);
-      line-height: 1.65;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      border-radius: 8px;
-      padding: 12px 18px;
-      font-weight: 850;
-      border: 1px solid var(--night);
-    }
-
-    .button.primary {
-      background: var(--night);
-      color: white;
-    }
-
-    .button.ghost {
-      background: rgba(255, 253, 250, 0.7);
-      color: var(--night);
-    }
-
-    .hero-card {
-      align-self: stretch;
-      display: grid;
-      align-content: end;
-      gap: 14px;
-      min-height: 460px;
-    }
-
-    .hero-photo {
-      position: relative;
-      min-height: 300px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(16, 19, 26, 0.1);
-      background: var(--night);
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
-      object-fit: cover;
-    }
-
-    .hero-photo::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(0deg, rgba(7, 5, 59, 0.34), rgba(7, 5, 59, 0.03));
-      pointer-events: none;
-    }
-
-    .seal {
-      background: rgba(255, 255, 255, 0.86);
-      border: 1px solid rgba(16, 19, 26, 0.1);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      padding: 26px;
-    }
-
-    .seal img {
-      width: min(300px, 78vw);
-      margin: 0 auto;
-    }
-
-    .facts {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    .fact {
-      min-height: 112px;
-      background: var(--night);
-      color: white;
-      border-radius: 8px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .fact strong {
-      font-size: 1.8rem;
-      line-height: 1;
-    }
-
-    .fact span {
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 0.78rem;
-      line-height: 1.25;
-    }
-
-    .intro-strip {
-      background: var(--night);
-      color: white;
-      padding: 34px 0;
-    }
-
-    .intro-strip .wrap {
-      display: grid;
-      grid-template-columns: 0.75fr 1fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .intro-strip strong {
-      font-size: clamp(1.8rem, 4vw, 3.7rem);
-      line-height: 0.95;
-    }
-
-    .intro-strip p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 1.03rem;
-    }
-
-    .section {
-      padding: 86px 0;
-    }
-
-    .section.alt {
-      background: var(--soft);
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 0.76fr) minmax(260px, 0.46fr);
-      gap: 34px;
-      align-items: end;
-      margin-bottom: 34px;
-    }
-
-    h2 {
-      margin-bottom: 0;
-      color: var(--night);
-      font-size: clamp(2rem, 4.8vw, 4.2rem);
-      line-height: 0.95;
-      letter-spacing: 0;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      margin: 0;
-      font-size: 1rem;
-    }
-
-    .story-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.85fr) minmax(300px, 0.72fr);
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .story-panel {
-      border-top: 5px solid var(--blue);
-      padding-top: 28px;
-      font-size: 1.08rem;
-      color: #2e3540;
-    }
-
-    .story-panel p {
-      margin-bottom: 18px;
-    }
-
-    .story-photo {
-      min-height: 100%;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-      background: var(--soft);
-    }
-
-    .story-photo img {
-      width: 100%;
-      height: 100%;
-      min-height: 430px;
-      object-fit: cover;
-    }
-
-    .story-side {
-      display: grid;
-      gap: 18px;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 12px;
-    }
-
-    .time-row {
-      display: grid;
-      grid-template-columns: 92px 1fr;
-      gap: 14px;
-      align-items: start;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 16px;
-    }
-
-    .time-row strong {
-      color: var(--rose);
-      font-size: 1.4rem;
-      line-height: 1;
-    }
-
-    .time-row span {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
-    .project {
-      min-height: 330px;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      background: white;
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 35px rgba(7, 5, 59, 0.07);
-    }
-
-    .project-image {
-      position: relative;
-      height: 154px;
-      overflow: hidden;
-      background: var(--night);
-    }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.35s ease;
-    }
-
-    .project:hover .project-image img {
-      transform: scale(1.04);
-    }
-
-    .project-top {
-      min-height: 68px;
-      padding: 14px 16px;
-      color: var(--night);
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      background: white;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .project:nth-child(1) .project-top span { background: var(--night); }
-    .project:nth-child(2) .project-top span { background: var(--green); }
-    .project:nth-child(3) .project-top span { background: var(--gold); }
-    .project:nth-child(4) .project-top span { background: var(--rose); }
-    .project:nth-child(5) .project-top span { background: var(--plum); }
-
-    .project-top span {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      color: white;
-      font-weight: 900;
-    }
-
-    .project-top small {
-      font-weight: 850;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.68rem;
-      color: var(--blue-dark);
-      text-align: right;
-    }
-
-    .project-body {
-      padding: 20px;
-      flex: 1;
-    }
-
-    .project h3 {
-      color: var(--night);
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 0;
-    }
-
-    .impact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .impact-feature {
-      min-height: 430px;
-      border-radius: 8px;
-      background:
-        linear-gradient(0deg, rgba(7, 5, 59, 0.86), rgba(7, 5, 59, 0.18)),
-        url("images/about-volunteers.jpg") center / cover no-repeat,
-        var(--night);
-      padding: 34px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow: hidden;
-    }
-
-    .impact-feature h2 {
-      color: white;
-      max-width: 580px;
-    }
-
-    .impact-feature p {
-      max-width: 600px;
-      color: rgba(255, 255, 255, 0.78);
-      margin: 18px 0 0;
-    }
-
-    .impact-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .impact-item {
-      min-height: 160px;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      background: white;
-      padding: 20px;
-    }
-
-    .impact-item strong {
-      display: block;
-      color: var(--night);
-      font-size: 1.02rem;
-      line-height: 1.2;
-      margin-bottom: 10px;
-    }
-
-    .impact-item span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .support-band {
-      background: #efe9e2;
-      padding: 70px 0;
-    }
-
-    .support-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.7fr) minmax(280px, 0.5fr);
-      gap: 34px;
-      align-items: center;
-    }
-
-    .support-grid h2 {
-      max-width: 660px;
-    }
-
-    .support-grid p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 620px;
-      margin: 18px 0 0;
-    }
-
-    .support-methods {
-      display: grid;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .support-methods li {
-      border-radius: 8px;
-      background: var(--paper);
-      border: 1px solid rgba(16, 19, 26, 0.1);
-      padding: 14px 16px;
-      color: var(--night);
-      font-weight: 850;
-    }
-
-    .contact {
-      background: var(--night);
-      color: white;
-      padding: 82px 0 32px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.42fr);
-      gap: 34px;
-      align-items: end;
-    }
-
-    .contact h2 {
-      color: white;
-      max-width: 760px;
-    }
-
-    .contact p {
-      max-width: 650px;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 1.06rem;
-      margin: 18px 0 0;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .contact-links a {
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      border-radius: 8px;
-      padding: 10px 14px;
-      color: var(--night);
-      background: var(--blue);
-      font-weight: 850;
-    }
-
-    .prepared {
-      justify-self: end;
-      width: min(330px, 100%);
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background: rgba(255, 255, 255, 0.08);
-      padding: 20px;
-    }
-
-    .prepared span {
-      display: block;
-      color: rgba(255, 255, 255, 0.62);
-      font-size: 0.74rem;
-      font-weight: 850;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .prepared img {
-      width: 100%;
-      height: 58px;
-      object-fit: contain;
-      filter: invert(1);
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      margin-top: 58px;
-      padding-top: 24px;
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 0.86rem;
-    }
-
-    @media (max-width: 980px) {
-      .hero::before {
-        background:
-          linear-gradient(0deg, rgba(255, 253, 250, 0.93) 0%, rgba(255, 253, 250, 0.84) 100%),
-          url("images/hero-service.jpg") center / cover no-repeat;
-      }
-
-      .hero-grid,
-      .intro-strip .wrap,
-      .section-head,
-      .story-layout,
-      .impact-grid,
-      .support-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-grid {
-        min-height: auto;
-      }
-
-      .hero-card {
-        min-height: auto;
-      }
-
-      .projects {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .prepared {
-        justify-self: start;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .wrap {
-        width: min(100% - 28px, 1160px);
-      }
-
-      .nav {
-        min-height: 66px;
-      }
-
-      .navlinks {
-        display: none;
-      }
-
-      .mark img {
-        width: 44px;
-        height: 44px;
-      }
-
-      .mark strong {
-        font-size: 0.92rem;
-      }
-
-      .hero-grid {
-        padding: 44px 0 30px;
-        gap: 24px;
-      }
-
-      h1 {
-        font-size: clamp(2.85rem, 15vw, 3.85rem);
-        line-height: 0.9;
-      }
-
-      .hero-lede {
-        font-size: 1rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        margin-top: 24px;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .hero-card {
-        display: none;
-      }
-
-      .seal {
-        padding: 16px;
-      }
-
-      .seal img {
-        width: 148px;
-      }
-
-      .facts {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .fact {
-        min-height: 72px;
-        padding: 12px 9px;
-      }
-
-      .fact strong {
-        font-size: 1.22rem;
-      }
-
-      .fact span {
-        font-size: 0.66rem;
-      }
-
-      .section {
-        padding: 62px 0;
-      }
-
-      .intro-strip {
-        padding: 28px 0;
-      }
-
-      .time-row {
-        grid-template-columns: 72px 1fr;
-      }
-
-      .projects,
-      .impact-list {
-        grid-template-columns: 1fr;
-      }
-
-      .project {
-        min-height: auto;
-      }
-
-      .impact-feature {
-        min-height: 330px;
-        padding: 24px;
-      }
-
-      .contact {
-        padding-top: 64px;
-      }
-
-      .contact-links {
-        flex-direction: column;
-      }
-
-      .contact-links a {
-        justify-content: center;
-      }
-
-      footer {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
@@ -849,6 +19,7 @@
       </a>
       <nav class="navlinks" aria-label="Page navigation">
         <a href="#about">About</a>
+        <a href="#fellowship">Fellowship</a>
         <a href="#projects">Projects</a>
         <a href="#impact">Impact</a>
         <a href="#support">Support</a>
@@ -910,8 +81,12 @@
           <p>Ladies Circle began in England in 1930, became Ladies Circle International in 1959, and is now an independent global association.</p>
         </div>
 
-        <div class="story-layout">
-          <div class="story-panel">
+        <div class="about-panel">
+          <figure class="about-photo">
+            <img src="images/about-volunteers.jpg" alt="Ladies Circle Botswana volunteers walking together after community service" />
+          </figure>
+
+          <div class="about-copy">
             <p>
               Ladies Circle Botswana was formed in 1980. Today, its 32 members are organised into four circles: three in Gaborone and one in Francistown.
             </p>
@@ -921,12 +96,6 @@
             <p>
               Every circle carries a project, giving the national network a practical footprint in schools, health services, family welfare, disability support, and community development.
             </p>
-          </div>
-
-          <div class="story-side">
-            <figure class="story-photo">
-              <img src="images/about-volunteers.jpg" alt="Ladies Circle Botswana volunteers walking together after community service" />
-            </figure>
 
             <div class="timeline" aria-label="Ladies Circle history">
               <div class="time-row">
@@ -951,10 +120,57 @@
       </div>
     </section>
 
+    <section class="section fellowship" id="fellowship" aria-labelledby="fellowship-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="fellowship-title">Fellowship is part of the service.</h2>
+          <p>Members do not only meet to fundraise. They build friendships, mentor one another, share ideas, and create the trust that keeps service work moving.</p>
+        </div>
+
+        <div class="fellowship-layout">
+          <article class="fellowship-feature">
+            <img src="images/fellowship-tea.jpg" alt="Ladies Circle Botswana members sharing tea and conversation after a service meeting" loading="lazy" />
+            <div class="fellowship-feature-content">
+              <h3>Friendship creates the energy behind the work.</h3>
+              <p>Circle meetings and fellowships give members space to connect before they go back into the community.</p>
+            </div>
+          </article>
+
+          <div class="fellowship-gallery">
+            <article class="fellowship-card">
+              <figure class="fellowship-photo">
+                <img src="images/fellowship-gathering.jpg" alt="Ladies Circle Botswana members laughing together before a community event" loading="lazy" />
+              </figure>
+              <div class="fellowship-card-body">
+                <strong>Belonging</strong>
+                <span>A circle is a place to be known, encouraged, and supported while serving others.</span>
+              </div>
+            </article>
+
+            <article class="fellowship-card">
+              <figure class="fellowship-photo">
+                <img src="images/fellowship-circle.jpg" alt="Ladies Circle Botswana members standing together in a supportive circle" loading="lazy" />
+              </figure>
+              <div class="fellowship-card-body">
+                <strong>Shared purpose</strong>
+                <span>Members bring different skills, networks, and experiences into one practical service mission.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="fellowship-notes" aria-label="Fellowship themes">
+          <div class="fellowship-note">New friendships are formed through regular circle meetings and service activities.</div>
+          <div class="fellowship-note">Members plan, fundraise, volunteer, and celebrate project milestones together.</div>
+          <div class="fellowship-note">The result is a stronger national network across Gaborone and Francistown.</div>
+        </div>
+      </div>
+    </section>
+
     <section class="section alt" id="projects" aria-labelledby="projects-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="projects-title">Current projects for 2025/26.</h2>
+          <h2 id="projects-title">Projects for 2025/26.</h2>
           <p>The national portfolio turns service into targeted support for children, learners, families, and centres doing essential care work.</p>
         </div>
 
@@ -1106,5 +322,6 @@
       </footer>
     </section>
   </main>
+  <script src="script.js" defer></script>
 </body>
 </html>
