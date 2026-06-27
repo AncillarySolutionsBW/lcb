@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ladies Circle Botswana — Friendship &amp; Service</title>
+  <meta name="description" content="Ladies Circle Botswana: 32 women united in friendship and service since 1980, supporting communities across Botswana." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --sky:        #5AB8F5;
+      --sky-mid:    #2E9BD6;
+      --sky-light:  #EBF8FF;
+      --sky-pale:   #F4FAFF;
+      --navy:       #080349;
+      --navy-mid:   #0f0a6b;
+      --navy-soft:  #1a1469;
+      --gold:       #C98B08;
+      --gold-warm:  #E8A020;
+      --gold-light: #FEF5DC;
+      --maroon:     #692323;
+      --white:      #ffffff;
+      --ink:        #080B17;
+      --muted:      #5c6880;
+      --line:       #D6EAF6;
+      --bg-soft:    #F7FBFF;
+      --r:          16px;
+      --r-sm:       10px;
+      --shadow:     0 20px 60px rgba(8,3,73,.13);
+      --shadow-sm:  0 4px 24px rgba(8,3,73,.08);
+    }
+
+    /* ── RESET ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── TYPOGRAPHY ──────────────────────────────────────── */
+    h1, h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+    }
+    h3 { line-height: 1.2; }
+
+    /* ── LAYOUT ──────────────────────────────────────────── */
+    .wrap {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+    .section { padding: 96px 0; }
+    .section-sky   { background: var(--sky-pale); }
+    .section-soft  { background: var(--bg-soft); }
+
+    /* ── LABEL ───────────────────────────────────────────── */
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sky-mid);
+      margin-bottom: 16px;
+    }
+    .label::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 3px;
+      background: var(--sky);
+      border-radius: 999px;
+      flex-shrink: 0;
+    }
+    .label.light { color: #a8ddfc; }
+    .label.light::before { background: var(--sky); }
+
+    /* ── BUTTONS ─────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 12px 26px;
+      border-radius: var(--r-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s, background .15s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--sky);
+      color: var(--navy);
+      box-shadow: 0 4px 20px rgba(90,184,245,.45);
+    }
+    .btn-primary:hover { box-shadow: 0 10px 32px rgba(90,184,245,.55); }
+
+    .btn-ghost {
+      background: rgba(255,255,255,.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,.28);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.18); }
+
+    .btn-gold {
+      background: var(--gold-warm);
+      color: white;
+      box-shadow: 0 4px 20px rgba(232,160,32,.4);
+    }
+    .btn-gold:hover { box-shadow: 0 10px 32px rgba(232,160,32,.55); }
+
+    .btn-navy {
+      background: var(--navy);
+      color: white;
+    }
+    .btn-navy:hover { background: var(--navy-mid); }
+
+    /* ── TOPBAR / NAV ────────────────────────────────────── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.93);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(90,184,245,.18);
+      box-shadow: 0 1px 24px rgba(8,3,73,.06);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 80px;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+    }
+    .brand-text strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .brand-text em {
+      display: block;
+      font-family: 'Dancing Script', cursive;
+      font-style: normal;
+      font-size: 0.95rem;
+      color: var(--sky-mid);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .nav-links a {
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+      transition: background .15s;
+    }
+    .nav-links a:hover { background: var(--sky-light); }
+    .nav-links .nav-cta {
+      background: var(--navy);
+      color: white;
+      margin-left: 6px;
+    }
+    .nav-links .nav-cta:hover { background: var(--navy-mid); }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 50%, #162474 100%);
+      color: white;
+      overflow: hidden;
+    }
+    .hero-bg-glow {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 900px 700px at 80% 50%, rgba(90,184,245,.16) 0%, transparent 65%),
+        radial-gradient(ellipse 500px 400px at 10% 90%, rgba(90,184,245,.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(90,184,245,.12);
+      pointer-events: none;
+    }
+    .hero-ring-1 { top: -140px; right: -140px; width: 560px; height: 560px; }
+    .hero-ring-2 { bottom: -200px; right: 80px;  width: 380px; height: 380px; }
+    .hero-ring-3 { top: 100px; right: 200px; width: 180px; height: 180px; }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 64px;
+      align-items: center;
+      padding: 88px 0 80px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(90,184,245,.15);
+      border: 1px solid rgba(90,184,245,.3);
+      border-radius: 999px;
+      padding: 7px 18px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #a8ddfc;
+      margin-bottom: 26px;
+    }
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--sky);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.4rem, 7vw, 7.2rem);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 8px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--sky);
+    }
+
+    .hero-motto {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      color: rgba(255,255,255,.68);
+      margin-bottom: 26px;
+    }
+
+    .hero-desc {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,.72);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 38px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* Hero right */
+    .hero-right { display: flex; flex-direction: column; gap: 16px; }
+
+    .logo-card {
+      background: rgba(255,255,255,.97);
+      border-radius: 22px;
+      padding: 40px 36px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 40px 100px rgba(8,3,73,.35), 0 0 0 1px rgba(255,255,255,.15);
+    }
+    .logo-card img {
+      width: min(290px, 72vw);
+      height: auto;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 14px;
+      padding: 18px 12px;
+      text-align: center;
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--sky);
+      line-height: 1;
+    }
+    .hero-stat span {
+      display: block;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,.6);
+      margin-top: 6px;
+      line-height: 1.35;
+    }
+
+    /* ── MOTTO STRIP ─────────────────────────────────────── */
+    .motto-strip {
+      background: var(--sky);
+      padding: 26px 0;
+      overflow: hidden;
+    }
+    .motto-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .motto-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .motto-sep {
+      width: 8px;
+      height: 8px;
+      background: var(--navy);
+      border-radius: 50%;
+      opacity: .3;
+    }
+
+    /* ── ABOUT / STORY ───────────────────────────────────── */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .story-img-wrap { position: relative; }
+
+    .story-img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .founded-badge {
+      position: absolute;
+      bottom: -28px;
+      right: -28px;
+      width: 148px;
+      height: 148px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border: 5px solid white;
+      box-shadow: 0 20px 48px rgba(8,3,73,.28);
+      padding: 12px;
+    }
+    .founded-badge strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--sky);
+      line-height: 1;
+    }
+    .founded-badge span {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,.7);
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+
+    .story-copy { padding-right: 12px; }
+
+    .story-copy h2 {
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+    .story-copy h2 em { font-style: italic; color: var(--sky-mid); }
+
+    .story-copy p {
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .motto-quote {
+      margin-top: 32px;
+      padding: 24px 28px;
+      background: var(--navy);
+      border-radius: 14px;
+      color: white;
+    }
+    .motto-quote p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .motto-quote span {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,.55);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── FELLOWSHIP GALLERY ──────────────────────────────── */
+    .gallery-intro {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .gallery-intro .label { justify-content: center; margin-bottom: 14px; }
+    .gallery-intro h2 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      color: var(--navy);
+    }
+    .gallery-intro p {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.65;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      grid-template-rows: 360px 260px;
+      gap: 14px;
+    }
+    .g-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    .g-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .g-item:hover img { transform: scale(1.05); }
+
+    .g-item:nth-child(1) { grid-row: span 2; }
+    .g-item:nth-child(4) { grid-column: 2 / span 2; }
+
+    .g-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,3,73,.6) 0%, transparent 55%);
+      display: flex;
+      align-items: flex-end;
+      padding: 18px;
+    }
+    .g-overlay span {
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,.4);
+    }
+
+    /* ── PROJECTS ────────────────────────────────────────── */
+    .projects-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .projects-head h2 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      color: var(--navy);
+    }
+    .projects-head p {
+      max-width: 340px;
+      color: var(--muted);
+      font-size: 1rem;
+      text-align: right;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .p-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .p-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 56px rgba(8,3,73,.14);
+    }
+
+    .p-card-img {
+      width: 100%;
+      height: 164px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CSS fallback image blocks */
+    .p-img-block {
+      width: 100%;
+      height: 164px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+    }
+    .p-img-block.nat  { background: linear-gradient(135deg, #0f2c85, #1a4fbd); }
+    .p-img-block.edu  { background: linear-gradient(135deg, #0a6b3a, #13a85d); }
+    .p-img-block.comm { background: linear-gradient(135deg, #7b2d00, #c24600); }
+    .p-img-block.girl { background: linear-gradient(135deg, #6b0a6b, #b018b0); }
+    .p-img-block.spec { background: linear-gradient(135deg, #065a5a, #0a9090); }
+
+    .p-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .p-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .p-tag.nat  { background: #EBF3FF; color: #0d3ab5; }
+    .p-tag.lc   { background: var(--sky-light); color: var(--sky-mid); }
+
+    .p-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .p-card p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    /* ── IMPACT NUMBERS ──────────────────────────────────── */
+    .impact-band {
+      background: linear-gradient(135deg, var(--navy) 0%, #162474 100%);
+      color: white;
+      padding: 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .impact-band::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 580px; height: 580px;
+      border: 1px solid rgba(90,184,245,.1);
+      border-radius: 50%;
+    }
+    .impact-band::after {
+      content: '';
+      position: absolute;
+      bottom: -200px; left: -120px;
+      width: 500px; height: 500px;
+      border: 1px solid rgba(90,184,245,.07);
+      border-radius: 50%;
+    }
+    .impact-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .impact-inner h2 {
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      color: white;
+      margin-bottom: 56px;
+    }
+
+    .impact-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .i-stat {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 40px 20px;
+      transition: background .2s;
+    }
+    .i-stat:hover { background: rgba(255,255,255,.12); }
+
+    .i-num {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.4rem;
+      font-weight: 700;
+      color: var(--sky);
+      line-height: 1;
+    }
+    .i-label {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,.62);
+      line-height: 1.45;
+    }
+
+    /* ── SERVICE LEGACY ──────────────────────────────────── */
+    .legacy-intro {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+    .legacy-intro h2 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      color: var(--navy);
+    }
+
+    .legacy-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .l-card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--sky);
+    }
+    .l-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--sky-light);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+    }
+    .l-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .l-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .l-card li {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.45;
+      padding-left: 14px;
+      position: relative;
+    }
+    .l-card li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      background: var(--sky);
+      border-radius: 50%;
+    }
+
+    /* ── DONATE ──────────────────────────────────────────── */
+    .donate-section {
+      background: linear-gradient(135deg, #fffdf7 0%, var(--gold-light) 100%);
+      padding: 96px 0;
+    }
+    .donate-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .donate-img-wrap { position: relative; }
+
+    .donate-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .donate-float-card {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      background: var(--gold-warm);
+      color: white;
+      border-radius: 18px;
+      padding: 26px 24px;
+      max-width: 230px;
+      box-shadow: 0 20px 48px rgba(232,160,32,.35);
+      border: 4px solid white;
+    }
+    .donate-float-card .fc-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .donate-float-card strong {
+      display: block;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .donate-float-card p {
+      font-size: 0.82rem;
+      opacity: .88;
+      line-height: 1.45;
+      margin: 0;
+      color: white;
+    }
+
+    .donate-copy .label { color: #A07010; }
+    .donate-copy .label::before { background: var(--gold-warm); }
+
+    .donate-copy h2 {
+      font-size: clamp(2.2rem, 3.8vw, 3.8rem);
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .donate-copy > p {
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.72;
+      margin-bottom: 16px;
+    }
+
+    .ways-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 30px 0 36px;
+    }
+    .way-card {
+      background: white;
+      border-radius: 14px;
+      padding: 18px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: 0 2px 16px rgba(8,3,73,.06);
+      border: 1px solid rgba(212,149,10,.12);
+    }
+    .way-icon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+    .way-text h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+    .way-text p {
+      font-size: 0.81rem;
+      color: var(--muted);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .donate-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* ── CONTACT ─────────────────────────────────────────── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-layout h2 {
+      font-size: clamp(2.2rem, 3.8vw, 3.6rem);
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .contact-layout > div > p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .contact-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .contact-card {
+      background: var(--sky-pale);
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--sky);
+      padding: 32px;
+    }
+    .contact-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+    .c-detail {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .c-detail:last-child { border-bottom: none; }
+    .c-di { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+    .c-di-label {
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+    .c-di-value {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+
+    /* ── PARTNER ─────────────────────────────────────────── */
+    .partner-strip {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+    }
+    .partner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .partner-inner span { font-size: 0.82rem; color: var(--muted); }
+    .partner-logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      opacity: .65;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 22px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,.45);
+    }
+    .footer-inner a {
+      color: rgba(255,255,255,.35);
+      transition: color .15s;
+    }
+    .footer-inner a:hover { color: rgba(255,255,255,.7); }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 1060px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 0 52px;
+      }
+      .hero-right { max-width: 480px; }
+
+      .story-grid,
+      .donate-layout,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+      .story-img { height: 420px; }
+      .founded-badge { right: 16px; bottom: 16px; width: 130px; height: 130px; }
+      .donate-img { height: 420px; }
+      .donate-float-card { display: none; }
+
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .impact-stats { grid-template-columns: repeat(2, 1fr); }
+      .legacy-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 280px 240px;
+      }
+      .g-item:nth-child(1) { grid-row: span 1; }
+      .g-item:nth-child(4) { grid-column: span 1; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .nav-links { display: none; }
+
+      .hero h1 { font-size: 3rem; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+
+      .projects-grid { grid-template-columns: 1fr; }
+      .impact-stats { grid-template-columns: repeat(2, 1fr); }
+      .legacy-grid { grid-template-columns: 1fr; }
+      .ways-grid { grid-template-columns: 1fr; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px 200px;
+      }
+
+      .projects-head { flex-direction: column; align-items: flex-start; }
+      .projects-head p { text-align: left; max-width: 100%; }
+      .legacy-intro { flex-direction: column; }
+    }
+
+    @media (max-width: 480px) {
+      .impact-stats { grid-template-columns: 1fr 1fr; }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .g-item { height: 240px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<header class="topbar">
+  <nav class="nav wrap" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Ladies Circle Botswana home">
+      <img src="ladies%20circle%202022%20with%20MOTO%20(1).png" alt="Ladies Circle Botswana logo" />
+      <span class="brand-text">
+        <strong>Ladies Circle Botswana</strong>
+        <em>Friendship &amp; Service</em>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#fellowship">Fellowship</a>
+      <a href="#projects">Projects</a>
+      <a href="#impact">Impact</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact" class="nav-cta">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ── HERO ──────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-ring hero-ring-1"></div>
+    <div class="hero-ring hero-ring-2"></div>
+    <div class="hero-ring hero-ring-3"></div>
+
+    <div class="hero-inner wrap">
+      <div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          2025 / 2026 Portfolio
+        </div>
+
+        <h1 id="hero-title">
+          Ladies<br />
+          <em>Circle</em><br />
+          Botswana
+        </h1>
+
+        <p class="hero-motto">Friendship &amp; Service</p>
+
+        <p class="hero-desc">
+          A national circle of women empowering communities through friendship, service,
+          and purposeful fundraising across Botswana — since 1980.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#donate">&#9829; Support our work</a>
+          <a class="btn btn-primary" href="#projects">View current projects</a>
+          <a class="btn btn-ghost" href="mailto:lcbtautona@gmail.com">Partner with LCB</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="logo-card">
+          <img src="ladies%20circle%202022%20with%20MOTO%20(1).png" alt="Ladies Circle Botswana — Friendship and Service" />
+        </div>
+        <div class="hero-stats" role="list">
+          <div class="hero-stat" role="listitem">
+            <strong>1980</strong>
+            <span>Founded in Botswana</span>
+          </div>
+          <div class="hero-stat" role="listitem">
+            <strong>32</strong>
+            <span>Members nationally</span>
+          </div>
+          <div class="hero-stat" role="listitem">
+            <strong>4</strong>
+            <span>Active circles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MOTTO STRIP ────────────────────────────────────── -->
+  <div class="motto-strip" aria-hidden="true">
+    <div class="motto-track">
+      <span class="motto-text">Friendship &amp; Service</span>
+      <span class="motto-sep"></span>
+      <span class="motto-text">Umoja na Huduma</span>
+      <span class="motto-sep"></span>
+      <span class="motto-text">Ladies Circle Botswana</span>
+      <span class="motto-sep"></span>
+      <span class="motto-text">Est. 1980</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT / STORY ──────────────────────────────────── -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="story-grid">
+
+        <div class="story-img-wrap">
+          <!-- Replace with an actual LCB fellowship photo -->
+          <img
+            class="story-img"
+            src="https://picsum.photos/seed/lcb-about/800/540"
+            alt="Ladies Circle Botswana members at a community event"
+            loading="lazy"
+          />
+          <div class="founded-badge" aria-hidden="true">
+            <strong>1980</strong>
+            <span>Founded in Botswana</span>
+          </div>
+        </div>
+
+        <div class="story-copy">
+          <div class="label">Our Story</div>
+          <h2 id="about-title">
+            Friendship<br />
+            <em>in action.</em>
+          </h2>
+          <p>
+            Ladies Circle Botswana was formed in 1980 and subscribes to the aims, objectives,
+            and motto of Ladies Circle International — an association born in England in 1930
+            and now spanning 36 countries with over 13,000 women worldwide.
+          </p>
+          <p>
+            Today we bring together 32 women across four active circles — three in Gaborone
+            and one in Francistown. Together we raise funds, host community events, and
+            deliver practical support to organisations across Botswana.
+          </p>
+          <p>
+            Ladies Circle is open to all women aged 18 to 45. We believe that service
+            is most powerful when built on genuine friendship.
+          </p>
+          <div class="motto-quote">
+            <p>"Friendship &amp; Service"</p>
+            <span>The motto that guides every circle.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FELLOWSHIP GALLERY ─────────────────────────────── -->
+  <section class="section section-sky" id="fellowship" aria-labelledby="fellowship-title">
+    <div class="wrap">
+      <div class="gallery-intro">
+        <div class="label">Our Community</div>
+        <h2 id="fellowship-title">Women. Together. Thriving.</h2>
+        <p>
+          From tea parties and themed events to community drives and fundraising galas —
+          LCB ladies know how to make service joyful.
+        </p>
+      </div>
+
+      <!-- Replace each src with actual LCB event / fellowship photos -->
+      <div class="gallery-grid">
+        <div class="g-item">
+          <img src="https://picsum.photos/seed/lcb-g1/600/640" alt="LCB ladies at a fellowship gathering" loading="lazy" />
+          <div class="g-overlay"><span>Fellowship &amp; fun</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://picsum.photos/seed/lcb-g2/480/340" alt="LCB themed event" loading="lazy" />
+          <div class="g-overlay"><span>Themed events</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://picsum.photos/seed/lcb-g3/480/340" alt="LCB tea party" loading="lazy" />
+          <div class="g-overlay"><span>Tea parties</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://picsum.photos/seed/lcb-g4/700/280" alt="LCB community service" loading="lazy" />
+          <div class="g-overlay"><span>Community service</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://picsum.photos/seed/lcb-g5/480/280" alt="LCB fundraising gala" loading="lazy" />
+          <div class="g-overlay"><span>Fundraising galas</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CURRENT PROJECTS ───────────────────────────────── -->
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+      <div class="projects-head">
+        <div>
+          <div class="label">2025 / 2026</div>
+          <h2 id="projects-title">Current projects</h2>
+        </div>
+        <p>Each circle champions a focused service project — from education and health to dignity support and special needs care.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="p-card">
+          <div class="p-img-block nat" aria-hidden="true">&#127968;</div>
+          <div class="p-body">
+            <span class="p-tag nat">National</span>
+            <h3>Lorato House, Maun</h3>
+            <p>LCB National Project — fundraising to support Lorato House, providing care and shelter in Maun.</p>
+          </div>
+        </article>
+
+        <article class="p-card">
+          <div class="p-img-block edu" aria-hidden="true">&#127979;</div>
+          <div class="p-body">
+            <span class="p-tag lc">Circle #1</span>
+            <h3>Kacgae Primary School</h3>
+            <p>Fundraising in support of Kacgae Primary School in the remote Kgalagadi Region.</p>
+          </div>
+        </article>
+
+        <article class="p-card">
+          <div class="p-img-block comm" aria-hidden="true">&#129309;</div>
+          <div class="p-body">
+            <span class="p-tag lc">Circle #2</span>
+            <h3>Kgodisong Center, Kanye</h3>
+            <p>Fundraising in support of the Kgodisong Community Center based in Kanye.</p>
+          </div>
+        </article>
+
+        <article class="p-card">
+          <div class="p-img-block girl" aria-hidden="true">&#128149;</div>
+          <div class="p-body">
+            <span class="p-tag lc">Circle #3</span>
+            <h3>Dignity for Girls</h3>
+            <p>Providing sanitary pads for learners at Mookane Junior Secondary School.</p>
+          </div>
+        </article>
+
+        <article class="p-card">
+          <div class="p-img-block spec" aria-hidden="true">&#10024;</div>
+          <div class="p-body">
+            <span class="p-tag lc">Circle #4</span>
+            <h3>Red Cross Francistown</h3>
+            <p>Supporting the Red Cross Francistown Centre for children with autism, dyslexia, and physical disabilities.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IMPACT NUMBERS ─────────────────────────────────── -->
+  <section class="impact-band" id="impact" aria-labelledby="impact-title">
+    <div class="wrap impact-inner">
+      <div class="label light" style="justify-content:center; margin-bottom:16px;">Our Impact</div>
+      <h2 id="impact-title">45+ years of friendship &amp; service</h2>
+
+      <div class="impact-stats">
+        <div class="i-stat">
+          <span class="i-num">45+</span>
+          <span class="i-label">Years serving Botswana communities</span>
+        </div>
+        <div class="i-stat">
+          <span class="i-num">32</span>
+          <span class="i-label">Active members across four circles</span>
+        </div>
+        <div class="i-stat">
+          <span class="i-num">12+</span>
+          <span class="i-label">Organisations supported over the years</span>
+        </div>
+        <div class="i-stat">
+          <span class="i-num">5</span>
+          <span class="i-label">Live projects running in 2025 / 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICE LEGACY ─────────────────────────────────── -->
+  <section class="section section-soft" aria-labelledby="legacy-title">
+    <div class="wrap">
+      <div class="legacy-intro">
+        <div>
+          <div class="label">Service Record</div>
+          <h2 id="legacy-title">Organisations we have supported</h2>
+        </div>
+      </div>
+
+      <div class="legacy-grid">
+        <div class="l-card">
+          <div class="l-icon">&#129658;</div>
+          <h3>Health &amp; Care</h3>
+          <ul>
+            <li>Cancer Association of Botswana — Happy Hearts Home</li>
+            <li>Deborah Relief Memorial Hospital — neo-natal equipment</li>
+            <li>Reach for a Dream Foundation — terminally ill children</li>
+            <li>Journey of Hope — cancer awareness &amp; development</li>
+          </ul>
+        </div>
+
+        <div class="l-card">
+          <div class="l-icon">&#128218;</div>
+          <h3>Children &amp; Education</h3>
+          <ul>
+            <li>Xhumo Community Trust — day care centre construction</li>
+            <li>Bana Ba Metsi, Shakawe — hostel beds for children</li>
+            <li>I Am Special Education Society — family fun days</li>
+            <li>School-linked sanitary pad drives</li>
+          </ul>
+        </div>
+
+        <div class="l-card">
+          <div class="l-icon">&#128170;</div>
+          <h3>Safety &amp; Dignity</h3>
+          <ul>
+            <li>Women's Shelter — ablution block development fund</li>
+            <li>Youth Against Drug Abuse — financial literacy talks</li>
+            <li>Tlamelong Projects — monthly feeding scheme</li>
+            <li>Street children rehabilitation support</li>
+          </ul>
+        </div>
+
+        <div class="l-card">
+          <div class="l-icon">&#9997;&#65039;</div>
+          <h3>Inclusion &amp; Youth</h3>
+          <ul>
+            <li>Down Syndrome Association of Botswana — long-term partner</li>
+            <li>Botswana Association of the Blind &amp; Partially Sighted</li>
+            <li>Tlamelong — land purchase fundraising</li>
+            <li>Special needs children in Francistown</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DONATE ─────────────────────────────────────────── -->
+  <section class="donate-section" id="donate" aria-labelledby="donate-title">
+    <div class="wrap">
+      <div class="donate-layout">
+
+        <div class="donate-img-wrap">
+          <!-- Replace with an actual LCB donation / event photo -->
+          <img
+            class="donate-img"
+            src="https://picsum.photos/seed/lcb-donate/720/500"
+            alt="LCB members at a fundraising event"
+            loading="lazy"
+          />
+          <div class="donate-float-card">
+            <div class="fc-icon">&#10084;&#65039;</div>
+            <strong>Every donation changes a life</strong>
+            <p>100% of proceeds go directly into LCB circle projects.</p>
+          </div>
+        </div>
+
+        <div class="donate-copy">
+          <div class="label">Make a Difference</div>
+          <h2 id="donate-title">
+            Your support<br />
+            <em>reaches communities.</em>
+          </h2>
+          <p>
+            All LCB projects are funded entirely through the generosity of individuals,
+            partners, and our own fundraising events. There is no overhead — every contribution
+            goes directly to the circles' service projects.
+          </p>
+          <p>
+            Whether through a private donation, attending one of our events, or partnering
+            as a corporate sponsor — your involvement creates real, lasting impact across Botswana.
+          </p>
+
+          <div class="ways-grid">
+            <div class="way-card">
+              <div class="way-icon">&#128181;</div>
+              <div class="way-text">
+                <h4>Private Donations</h4>
+                <p>Direct financial contributions to our national or circle projects.</p>
+              </div>
+            </div>
+            <div class="way-card">
+              <div class="way-icon">&#127861;</div>
+              <div class="way-text">
+                <h4>Tea Parties &amp; Events</h4>
+                <p>Attend one of our beautifully hosted themed events or annual galas.</p>
+              </div>
+            </div>
+            <div class="way-card">
+              <div class="way-icon">&#127914;</div>
+              <div class="way-text">
+                <h4>Merchandise &amp; Raffles</h4>
+                <p>Buy LCB merchandise or raffle tickets at our fundraising events.</p>
+              </div>
+            </div>
+            <div class="way-card">
+              <div class="way-icon">&#129309;</div>
+              <div class="way-text">
+                <h4>Corporate Partnerships</h4>
+                <p>Partner with us to amplify community impact and gain visibility.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="donate-actions">
+            <a class="btn btn-gold" href="mailto:lcbtautona@gmail.com">&#9829;&nbsp; Donate or partner</a>
+            <a class="btn btn-navy" href="https://www.facebook.com/search/top?q=ladies%20circle%20botswana" target="_blank" rel="noopener">Follow us on Facebook</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────── -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="contact-layout">
+
+        <div>
+          <div class="label">Get in Touch</div>
+          <h2 id="contact-title">
+            Connect with<br />
+            <em>Ladies Circle Botswana</em>
+          </h2>
+          <p>
+            For partnerships, donations, event invitations, or membership enquiries —
+            reach out to our National President or find us on Facebook.
+          </p>
+          <div class="contact-btns">
+            <a class="btn btn-navy" href="mailto:lcbtautona@gmail.com">&#9993;&nbsp; lcbtautona@gmail.com</a>
+            <a class="btn btn-primary" href="https://www.facebook.com/search/top?q=ladies%20circle%20botswana" target="_blank" rel="noopener">Facebook page</a>
+            <a class="btn btn-ghost" style="background:var(--sky-light);color:var(--navy-soft);" href="https://ladiescircleinternational.org/" target="_blank" rel="noopener">LCI website</a>
+          </div>
+        </div>
+
+        <aside class="contact-card">
+          <h3>Contact details</h3>
+
+          <div class="c-detail">
+            <div class="c-di">&#128100;</div>
+            <div>
+              <span class="c-di-label">National President</span>
+              <span class="c-di-value">Tafadzwa Chawafambira</span>
+            </div>
+          </div>
+
+          <div class="c-detail">
+            <div class="c-di">&#9993;&#65039;</div>
+            <div>
+              <span class="c-di-label">Email</span>
+              <span class="c-di-value">lcbtautona@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="c-detail">
+            <div class="c-di">&#128197;</div>
+            <div>
+              <span class="c-di-label">Circles</span>
+              <span class="c-di-value">Gaborone (3) · Francistown (1)</span>
+            </div>
+          </div>
+
+          <div class="c-detail">
+            <div class="c-di">&#127758;</div>
+            <div>
+              <span class="c-di-label">International body</span>
+              <span class="c-di-value">
+                <a href="https://ladiescircleinternational.org/" target="_blank" rel="noopener" style="color:var(--sky-mid);font-weight:700;">ladiescircleinternational.org</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="c-detail">
+            <div class="c-di">&#128100;&#128100;</div>
+            <div>
+              <span class="c-di-label">Membership</span>
+              <span class="c-di-value">Open to women aged 18–45</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <div class="partner-strip">
+        <div class="partner-inner">
+          <span>Website prepared with</span>
+          <div class="partner-logo">
+            <img src="../logos/ancillary-solutions-logo-cropped.png" alt="Ancillary Solutions" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>&#169; Ladies Circle Botswana 2025 / 2026</span>
+    <span style="font-family:'Dancing Script',cursive;font-size:1.1rem;opacity:.7;">Friendship &amp; Service</span>
+    <span><a href="https://ladiescircleinternational.org/" target="_blank" rel="noopener">LCI International</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

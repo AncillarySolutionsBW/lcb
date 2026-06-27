@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ladies Circle Botswana 2025/2026</title>
+  <meta name="description" content="Ladies Circle Botswana 2025/2026 portfolio: friendship, service, national projects, and community impact." />
+  <style>
+    :root {
+      --ink: #10131a;
+      --muted: #5f6875;
+      --line: #dce5ea;
+      --paper: #fffdfa;
+      --soft: #f4f8fa;
+      --night: #07053b;
+      --blue: #61b8e7;
+      --blue-dark: #1479b0;
+      --plum: #40294d;
+      --rose: #b94b5b;
+      --green: #206654;
+      --gold: #d99b2b;
+      --shadow: 0 24px 70px rgba(7, 5, 59, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 253, 250, 0.92);
+      border-bottom: 1px solid rgba(16, 19, 26, 0.09);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .mark strong {
+      display: block;
+      color: var(--night);
+      font-size: 0.95rem;
+      line-height: 1.1;
+    }
+
+    .mark span {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 0.78rem;
+      font-weight: 750;
+      margin-top: 2px;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.88rem;
+      font-weight: 750;
+      color: var(--night);
+    }
+
+    .navlinks a {
+      border-radius: 8px;
+      padding: 9px 12px;
+    }
+
+    .navlinks a:hover {
+      background: #e9f6fc;
+    }
+
+    .navlinks .solid {
+      background: var(--night);
+      color: white;
+      margin-left: 6px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: stretch;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255, 253, 250, 0.92) 0%, rgba(255, 253, 250, 0.86) 45%, rgba(255, 253, 250, 0.05) 100%),
+        url("ladies circle 2022 with MOTO (1).png") right -150px center / min(64vw, 760px) auto no-repeat;
+      opacity: 0.95;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.52fr);
+      gap: 44px;
+      align-items: center;
+      min-height: calc(100vh - 72px);
+      padding: 54px 0 44px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--blue-dark);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 36px;
+      height: 3px;
+      background: var(--rose);
+      border-radius: 999px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 840px;
+      margin-bottom: 22px;
+      margin-top: 18px;
+      color: var(--night);
+      font-size: clamp(3.1rem, 8vw, 7.8rem);
+      line-height: 0.88;
+      letter-spacing: 0;
+    }
+
+    .hero-lede {
+      max-width: 650px;
+      color: #333a45;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 8px;
+      padding: 12px 18px;
+      font-weight: 850;
+      border: 1px solid var(--night);
+    }
+
+    .button.primary {
+      background: var(--night);
+      color: white;
+    }
+
+    .button.ghost {
+      background: rgba(255, 253, 250, 0.7);
+      color: var(--night);
+    }
+
+    .hero-card {
+      align-self: stretch;
+      display: grid;
+      align-content: end;
+      gap: 14px;
+      min-height: 460px;
+    }
+
+    .seal {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(16, 19, 26, 0.1);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .seal img {
+      width: min(300px, 78vw);
+      margin: 0 auto;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .fact {
+      min-height: 112px;
+      background: var(--night);
+      color: white;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .fact strong {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .fact span {
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.78rem;
+      line-height: 1.25;
+    }
+
+    .intro-strip {
+      background: var(--night);
+      color: white;
+      padding: 34px 0;
+    }
+
+    .intro-strip .wrap {
+      display: grid;
+      grid-template-columns: 0.75fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .intro-strip strong {
+      font-size: clamp(1.8rem, 4vw, 3.7rem);
+      line-height: 0.95;
+    }
+
+    .intro-strip p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 1.03rem;
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section.alt {
+      background: var(--soft);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.76fr) minmax(260px, 0.46fr);
+      gap: 34px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      color: var(--night);
+      font-size: clamp(2rem, 4.8vw, 4.2rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .story-panel {
+      border-top: 5px solid var(--blue);
+      padding-top: 28px;
+      font-size: 1.08rem;
+      color: #2e3540;
+    }
+
+    .story-panel p {
+      margin-bottom: 18px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .time-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+    }
+
+    .time-row strong {
+      color: var(--rose);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .time-row span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .project {
+      min-height: 240px;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 35px rgba(7, 5, 59, 0.07);
+    }
+
+    .project-top {
+      min-height: 90px;
+      padding: 16px;
+      color: white;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .project:nth-child(1) .project-top { background: var(--night); }
+    .project:nth-child(2) .project-top { background: var(--green); }
+    .project:nth-child(3) .project-top { background: var(--gold); }
+    .project:nth-child(4) .project-top { background: var(--rose); }
+    .project:nth-child(5) .project-top { background: var(--plum); }
+
+    .project-top span {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .project-top small {
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.68rem;
+      opacity: 0.86;
+      text-align: right;
+    }
+
+    .project-body {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .project h3 {
+      color: var(--night);
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .impact-feature {
+      min-height: 430px;
+      border-radius: 8px;
+      background:
+        linear-gradient(0deg, rgba(7, 5, 59, 0.8), rgba(7, 5, 59, 0.3)),
+        url("ladies circle 2022 with MOTO (1).png") center / min(520px, 78%) auto no-repeat,
+        var(--night);
+      padding: 34px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .impact-feature h2 {
+      color: white;
+      max-width: 580px;
+    }
+
+    .impact-feature p {
+      max-width: 600px;
+      color: rgba(255, 255, 255, 0.78);
+      margin: 18px 0 0;
+    }
+
+    .impact-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .impact-item {
+      min-height: 160px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: white;
+      padding: 20px;
+    }
+
+    .impact-item strong {
+      display: block;
+      color: var(--night);
+      font-size: 1.02rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .impact-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .support-band {
+      background: #efe9e2;
+      padding: 70px 0;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(280px, 0.5fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .support-grid h2 {
+      max-width: 660px;
+    }
+
+    .support-grid p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 18px 0 0;
+    }
+
+    .support-methods {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .support-methods li {
+      border-radius: 8px;
+      background: var(--paper);
+      border: 1px solid rgba(16, 19, 26, 0.1);
+      padding: 14px 16px;
+      color: var(--night);
+      font-weight: 850;
+    }
+
+    .contact {
+      background: var(--night);
+      color: white;
+      padding: 82px 0 32px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.42fr);
+      gap: 34px;
+      align-items: end;
+    }
+
+    .contact h2 {
+      color: white;
+      max-width: 760px;
+    }
+
+    .contact p {
+      max-width: 650px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 1.06rem;
+      margin: 18px 0 0;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-links a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--night);
+      background: var(--blue);
+      font-weight: 850;
+    }
+
+    .prepared {
+      justify-self: end;
+      width: min(330px, 100%);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+    }
+
+    .prepared span {
+      display: block;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.74rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .prepared img {
+      width: 100%;
+      height: 58px;
+      object-fit: contain;
+      filter: invert(1);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      margin-top: 58px;
+      padding-top: 24px;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero::before {
+        background:
+          linear-gradient(0deg, rgba(255, 253, 250, 0.95) 0%, rgba(255, 253, 250, 0.78) 100%),
+          url("ladies circle 2022 with MOTO (1).png") right -180px top 80px / 540px auto no-repeat;
+      }
+
+      .hero-grid,
+      .intro-strip .wrap,
+      .section-head,
+      .story-layout,
+      .impact-grid,
+      .support-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        min-height: auto;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .prepared {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .wrap {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        min-height: 66px;
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+      .mark img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .mark strong {
+        font-size: 0.92rem;
+      }
+
+      .hero-grid {
+        padding: 44px 0 30px;
+        gap: 24px;
+      }
+
+      h1 {
+        font-size: clamp(2.85rem, 15vw, 3.85rem);
+        line-height: 0.9;
+      }
+
+      .hero-lede {
+        font-size: 1rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        margin-top: 24px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-card {
+        display: none;
+      }
+
+      .seal {
+        padding: 16px;
+      }
+
+      .seal img {
+        width: 148px;
+      }
+
+      .facts {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .fact {
+        min-height: 72px;
+        padding: 12px 9px;
+      }
+
+      .fact strong {
+        font-size: 1.22rem;
+      }
+
+      .fact span {
+        font-size: 0.66rem;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .intro-strip {
+        padding: 28px 0;
+      }
+
+      .time-row {
+        grid-template-columns: 72px 1fr;
+      }
+
+      .projects,
+      .impact-list {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        min-height: auto;
+      }
+
+      .impact-feature {
+        min-height: 330px;
+        padding: 24px;
+      }
+
+      .contact {
+        padding-top: 64px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+      }
+
+      .contact-links a {
+        justify-content: center;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="mark" href="#top" aria-label="Ladies Circle Botswana home">
+        <img src="ladies circle 2022 with MOTO (1).png" alt="Ladies Circle Botswana logo" />
+        <span>
+          <strong>Ladies Circle Botswana</strong>
+          <span>Friendship and Service</span>
+        </span>
+      </a>
+      <nav class="navlinks" aria-label="Page navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#impact">Impact</a>
+        <a href="#support">Support</a>
+        <a class="solid" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker">2025/2026 national portfolio</div>
+          <h1 id="page-title">Women serving Botswana through fellowship.</h1>
+          <p class="hero-lede">
+            Ladies Circle Botswana is a service association for women aged 18 to 45, bringing friendship into practical community action through fundraising, awareness, donations, and circle-led projects.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:lcbtautona@gmail.com">Email National President</a>
+            <a class="button ghost" href="#projects">See 2025/26 projects</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Ladies Circle Botswana key facts">
+          <div class="seal">
+            <img src="ladies circle 2022 with MOTO (1).png" alt="Ladies Circle Botswana Friendship and Service logo" />
+          </div>
+          <div class="facts">
+            <div class="fact">
+              <strong>1980</strong>
+              <span>Founded in Botswana</span>
+            </div>
+            <div class="fact">
+              <strong>32</strong>
+              <span>Members nationally</span>
+            </div>
+            <div class="fact">
+              <strong>4</strong>
+              <span>Circles across Botswana</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="Ladies Circle motto">
+      <div class="wrap">
+        <strong>Friendship and Service.</strong>
+        <p>
+          The motto is simple, but the work is broad: health, education, shelter, disability inclusion, youth support, fundraising, and hands-on service where communities need it most.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="about-title">An international movement with local roots.</h2>
+          <p>Ladies Circle began in England in 1930, became Ladies Circle International in 1959, and is now an independent global association.</p>
+        </div>
+
+        <div class="story-layout">
+          <div class="story-panel">
+            <p>
+              Ladies Circle Botswana was formed in 1980. Today, its 32 members are organised into four circles: three in Gaborone and one in Francistown.
+            </p>
+            <p>
+              The Botswana association subscribes to the aims, objectives, and motto of Ladies Circle International. Members build friendship while financing and delivering service through private donations, hosted events, tea parties, merchandise, raffles, and partner support.
+            </p>
+            <p>
+              Every circle carries a project, giving the national network a practical footprint in schools, health services, family welfare, disability support, and community development.
+            </p>
+          </div>
+
+          <div class="timeline" aria-label="Ladies Circle history">
+            <div class="time-row">
+              <strong>1930</strong>
+              <span>Ladies Circle is founded in England through women connected to Round Table members.</span>
+            </div>
+            <div class="time-row">
+              <strong>1959</strong>
+              <span>Ladies Circle International is formed with an equal international association structure.</span>
+            </div>
+            <div class="time-row">
+              <strong>1980</strong>
+              <span>Ladies Circle Botswana is formed.</span>
+            </div>
+            <div class="time-row">
+              <strong>1994</strong>
+              <span>Ladies Circle International becomes fully independent from Round Table.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="projects-title">Current projects for 2025/26.</h2>
+          <p>The national portfolio turns service into targeted support for children, learners, families, and centres doing essential care work.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project-top">
+              <span>N</span>
+              <small>National project</small>
+            </div>
+            <div class="project-body">
+              <h3>Lorato House, Maun</h3>
+              <p>National fundraising in support of Lorato House.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <span>1</span>
+              <small>Ladies Circle</small>
+            </div>
+            <div class="project-body">
+              <h3>Kacgae Primary School</h3>
+              <p>Fundraising support for the school in the Kgalagadi Region.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <span>2</span>
+              <small>Ladies Circle</small>
+            </div>
+            <div class="project-body">
+              <h3>Kgodisong Center</h3>
+              <p>Fundraising in support of Kgodisong Center in Kanye.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <span>3</span>
+              <small>Ladies Circle</small>
+            </div>
+            <div class="project-body">
+              <h3>Mookane Junior Secondary School</h3>
+              <p>Sanitary pad support for learners.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <span>4</span>
+              <small>Ladies Circle</small>
+            </div>
+            <div class="project-body">
+              <h3>Red Cross Francistown Centre</h3>
+              <p>Support for a centre schooling children with special needs.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="impact" aria-labelledby="impact-title">
+      <div class="wrap impact-grid">
+        <div class="impact-feature">
+          <h2 id="impact-title">A service record built across many needs.</h2>
+          <p>
+            Ladies Circle Botswana has supported organisations and projects spanning cancer care, children, education, shelter, disability inclusion, drug-awareness work, and community feeding schemes.
+          </p>
+        </div>
+
+        <div class="impact-list" aria-label="Past support areas">
+          <div class="impact-item">
+            <strong>Health and dreams</strong>
+            <span>Cancer Association of Botswana, Deborah Relief Memorial Hospital, Journey of Hope, and Reach for a Dream Foundation.</span>
+          </div>
+          <div class="impact-item">
+            <strong>Children and learning</strong>
+            <span>Xhumo Community Trust, Bana Ba Metsi, I Am Special Education Society, and school-based support.</span>
+          </div>
+          <div class="impact-item">
+            <strong>Shelter and welfare</strong>
+            <span>Women’s Shelter, Tlamelong Projects, and community rehabilitation initiatives.</span>
+          </div>
+          <div class="impact-item">
+            <strong>Inclusion and awareness</strong>
+            <span>Down Syndrome Association of Botswana, Botswana Association of the Blind and Partially Sighted, and Youth Against Drug Abuse.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-band" id="support" aria-labelledby="support-title">
+      <div class="wrap support-grid">
+        <div>
+          <h2 id="support-title">How projects are financed.</h2>
+          <p>
+            LCB’s service work is funded through community generosity and circle-led fundraising. Every contribution helps turn a project brief into visible support on the ground.
+          </p>
+        </div>
+        <ul class="support-methods">
+          <li>Private individual donations</li>
+          <li>Themed events and tea parties</li>
+          <li>Merchandise sales and raffles</li>
+          <li>Community and corporate partnerships</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="kicker">Contact</div>
+          <h2 id="contact-title">Start a conversation with Ladies Circle Botswana.</h2>
+          <p>
+            For more information, contact National President Tafadzwa Chawafambira or connect with Ladies Circle Botswana online.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:lcbtautona@gmail.com">lcbtautona@gmail.com</a>
+            <a href="https://www.facebook.com/search/top?q=ladies%20circle%20botswana" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://ladiescircleinternational.org/" target="_blank" rel="noopener">Ladies Circle International</a>
+          </div>
+        </div>
+
+        <aside class="prepared" aria-label="Ancillary Solutions logo">
+          <span>Prepared with</span>
+          <img src="ancillary-solutions-logo-cropped.png" alt="Ancillary Solutions logo" />
+        </aside>
+      </div>
+
+      <footer class="wrap">
+        <span>Ladies Circle Botswana 2025/2026</span>
+        <span>Friendship and Service</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
